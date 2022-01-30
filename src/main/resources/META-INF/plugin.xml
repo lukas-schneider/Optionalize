@@ -5,14 +5,12 @@
     <vendor>lukas-schneider</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.lukasschneider.optionalize.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.lukasschneider.optionalize.services.MyProjectService"/>
+        <intentionAction>
+            <className>com.github.lukasschneider.optionalize.CallChainToOptionalChainConverter</className>
+            <category>SDK intentions</category>
+        </intentionAction>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.lukasschneider.optionalize.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
