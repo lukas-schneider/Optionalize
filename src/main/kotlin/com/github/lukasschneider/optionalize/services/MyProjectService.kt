@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.lukasschneider.optionalize.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.github.lukasschneider.optionalize.MyBundle
 
 class MyProjectService(project: Project) {
 
